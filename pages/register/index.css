@@ -1,0 +1,104 @@
+
+body {
+    position: relative;
+    background-image: url("../../assets/background_img.png");
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.register{
+    margin-top: 70px;
+    width: 33%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    gap: var(--gap-4);
+}
+.register > h3{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+}
+.register-info{
+    gap: var(--gap-6);
+}
+.register-info > input{
+    border: 1px solid var(--color-grey-400);
+    width: 100%;
+    height: 52px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.register-info > input:focus{
+    outline: 1px solid var(--brand-blue);
+}
+.register-info > button{
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#select{
+    border: 1px solid var(--color-grey-400);
+    width: 100%;
+    height: 52px;
+    padding-left: 15px;
+    font-size: 16px;
+
+}
+#register-btn{
+    background-color: var(--brand-blue);
+    color: var(--fixed-white);
+    border: none;
+}
+#return-btn{
+    background-color: var(--fixed-white);
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue);
+}
+#return-btn:hover{
+    background-color: var(--brand-blue);
+    color: var(--fixed-white);
+}
+.btn-login{
+    background-color: var(--brand-blue);
+    color: var(--fixed-white);
+}
+
+@media(max-width: 900px){
+    .register{
+        width: 90%;
+    }
+}
+@media(max-width: 700px){
+    .top{
+        width: 97%;
+    }
+    .register{
+        width: 90%;
+    }
+}
+@media(max-width: 545px){
+    .top{
+        width: 85%;
+    }
+    .top-buttons{
+        display: none;
+    }
+    .img-top{
+        display: flex;
+    }
+    .register{
+        width: 100%;
+        padding: 15px !important;
+    }
+    .register > h3{
+        font-size: 29px;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/kenzie_empresas_logo.png">
+    <title>𝗞𝗲𝗻𝘇𝗶𝗲 𝗘𝗺𝗽𝗿𝗲𝘀𝗮𝘀</title>
+</head>
+<body>  
+    <header class="top-container flex flex-col">
+        <div class="top flex justify-between align-center">
+            <div class="logo flex align-center">
+                <img src="../../assets/kenzie_empresas_logo.png" alt="">
+                <h1>Kenzie Empresas</h1>
+            </div>
+
+            <div class="top-buttons flex align-center">
+                <button class="btn-home">Home</button>
+                <button class="btn-register">Cadastro</button>
+            </div>
+            <img src="../../assets/menu.png" alt="" class="img-top">
+        </div>
+        <div class="top-buttons modal-top flex justify-center hidden">
+            <button class="btn-home">Home</button>
+            <button class="btn-register">Cadastro</button>
+        </div>
+    </header>
+    <main class="container flex justify-center align-center">
+        <div class="login-container flex flex-col">
+            <h3>Login</h3>
+            <p>Preencha os campos para realizar login</p>
+            <form class="login-info flex flex-col">
+                <input type="text" placeholder="Seu e-mail" class="login-email">
+                <input type="password" placeholder="Sua senha" class="login-password">
+                <button id="login-btn">Login</button>
+            </form>
+            <small>ou</small>
+            <button id="register-btn">Cadastre-se</button>
+        </div>
+    </main>
+    <script src="../../scripts/baseUrl.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

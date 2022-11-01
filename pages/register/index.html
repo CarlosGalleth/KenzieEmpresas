@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/kenzie_empresas_logo.png">
+    <title>𝗞𝗲𝗻𝘇𝗶𝗲 𝗘𝗺𝗽𝗿𝗲𝘀𝗮𝘀</title>
+</head>
+
+<body>
+    <header class="top-container flex flex-col">
+        <div class="top flex justify-between align-center">
+            <div class="logo flex align-center">
+                <img src="../../assets/kenzie_empresas_logo.png" alt="">
+                <h1>Kenzie Empresas</h1>
+            </div>
+
+            <div class="top-buttons flex align-center">
+                <button class="btn-home">Home</button>
+                <button class="btn-login">Login</button>
+            </div>
+            <img src="../../assets/menu.png" alt="" class="img-top">
+        </div>
+        <div class="top-buttons modal-top flex justify-center hidden">
+            <button class="btn-home">Home</button>
+            <button class="btn-login">Login</button>
+        </div>
+    </header>
+    <main class="container flex justify-center align-center">
+        <div class="register flex flex-col">
+            <h3>Cadastre-se</h3>
+            <form class="register-info flex flex-col">
+                <input type="text" placeholder="Seu nome">
+                <input type="text" placeholder="Seu e-mail">
+                <input type="password" placeholder="Sua senha">
+                <select name="levels" id="select">
+                    <option value="" disabled selected hidden>Nível profissional</option>
+                    <option value="junior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Sênior</option>
+                </select>
+                <button id="register-btn">Cadastre-se</button>
+                <button id="return-btn">Retornar</button>
+            </form>
+        </div> 
+    </main>
+    <script src="../../scripts/baseUrl.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+
+.container{
+    position: relative;
+    top: 100px;
+    margin: 50px auto 50px auto;
+    width: 63%;
+    height: 580px;
+}
+.container > img{
+    width: 48.5%;
+    height: 580px;
+}
+.select-sector{
+    width: 48.5%;
+    height: 100%;
+}
+#sector{
+    width: 100%;
+    position: relative;
+    background-color: var(--brand-blue);
+    color: var(--fixed-white);
+    padding: 12px;
+}
+select{
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-image: url("../assets/seta.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: right;
+    outline: none;
+}
+.sector-list{
+    background-color: var(--color-grey-500);
+    padding: 23px 13px 40px 23px;
+    height: 100%;
+    overflow-y: auto;
+    gap: var(--gap-5);
+}
+.sector-list::-webkit-scrollbar{
+    width: 10px;
+}
+.sector-list::-webkit-scrollbar-thumb{ 
+    background-color: var(--brand-blue);
+}
+.sector-item{
+    background-color: var(--fixed-white);
+    padding: 13px 19px;
+    gap: var(--gap-5);
+    border-bottom: 1px solid var(--brand-blue);
+}
+.item-bottom{
+    gap: var(--gap-5);
+}
+.item-bottom > h4{
+    font-weight: 600;
+    width: max-content;
+    padding: 6px 24px;
+    border-radius: 32px;
+    border: 1px solid var(--brand-blue);
+    background-color: transparent;
+    color: var(--brand-blue);
+    font-size: 15px;
+}
+
+
+@media(max-width: 830px){
+    .top{
+        width: 100% !important;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .logo > h1{
+        font-size: 19px;
+    }
+    .top-buttons{
+        display: none;
+    }
+    .img-top{
+        display: flex !important;
+        width: 30px;
+    }
+    .modal-top{
+        display: flex;
+    }
+    .container{
+        padding: 0 20px;
+        width: 100%;
+    }
+    .container > img{
+        display: none;
+    }
+    .select-sector{
+        width: 100%;
+    }
+    .select-sector-top{
+        width: 100%;
+    }
+    .sector-list{
+        flex-direction: row;
+        overflow-x: auto;
+        width: 100%;
+        padding: 16px !important;
+        height: max-content;
+    }
+    .sector-item{
+        width: 500px;
+        gap: var(--gap-1);
+    }
+    .sector-item > h3{
+        width: 180px;
+    }
+}
+@media(max-width: 340px){
+    .modal-top{
+        gap: var(--gap-6);
+    }
+    .btn-register, .btn-login{
+        font-size: 16px !important;
+        padding: 13px 26px !important;
+    }
+}

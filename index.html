@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./styles/homePage.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="icon" type="image/x-icon" href="./assets/kenzie_empresas_logo.png">
+    <title>𝗞𝗲𝗻𝘇𝗶𝗲 𝗘𝗺𝗽𝗿𝗲𝘀𝗮𝘀</title>
+</head>
+
+<body>
+    <header class="top-container flex flex-col">
+        <div class="top flex justify-between align-center">
+            <div class="logo flex align-center">
+                <img src="./assets/kenzie_empresas_logo.png" alt="">
+                <h1>Kenzie Empresas</h1>
+            </div>
+
+            <div class="top-buttons flex align-center">
+                <button class="btn-login">Login</button>
+                <button class="btn-register">Cadastro</button>
+            </div>
+            <img src="./assets/menu.png" alt="" class="img-top">
+        </div>
+        <div class="top-buttons modal-top flex justify-center hidden">
+            <button class="btn-login">Login</button>
+            <button class="btn-register">Cadastro</button>
+        </div>
+    </header>
+
+    <main class="container flex justify-between">
+        <img src="./assets/img_brand.png" alt="">
+
+        <div class="select-sector flex flex-col">
+
+            <select name="sector" id="sector">
+                <option value="" disabled selected hidden>Selecionar Setor</option>
+            </select>
+
+            <ul class="sector-list flex flex-col"> 
+                <!--
+                <li class="sector-item flex flex-col">
+                    <h3>Empresa Name</h3>
+                    <div class="item-bottom flex flex-col">
+                        <p>10 horas</p>
+                        <button>Setor</button>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </main>
+    <script type="module" src="./scripts/baseUrl.js"></script>
+    <script type="module" src="./scripts/homePage.js"></script>
+</body>
+</html>

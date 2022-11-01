@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="./modals.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/kenzie_empresas_logo.png">
+    <title>𝗞𝗲𝗻𝘇𝗶𝗲 𝗘𝗺𝗽𝗿𝗲𝘀𝗮𝘀</title>
+</head>
+<body>
+    <header class="top-container flex flex-col">
+        <div class="top flex justify-between align-center">
+            <div class="logo flex align-center">
+                <img src="../../assets/kenzie_empresas_logo.png" alt="">
+                <h1>Kenzie Empresas</h1>
+            </div>
+
+            <div class="top-buttons flex align-center">
+                <button id="loggout">Loggout</button>
+            </div>
+            <img src="../../assets/menu.png" alt="" class="img-top">
+        </div>
+        <div class="top-buttons modal-top flex justify-center hidden">
+            <button id="loggout">Loggout</button>
+        </div>
+    </header>
+
+    <div class="content-top flex justify-between align-center">
+        <h3>Departamentos</h3>
+        <select name="departments" id="departments">
+            <option value="" disabled selected hidden>Selecionar Empresa</option>
+        </select>
+        <button class="create flex justify-center align-center"><span>+</span>Criar</button>
+    </div>
+
+    <ul class="departments-list flex justify-between wrap">
+        <li class="department flex flex-col">
+            <div class="department-info flex flex-col">
+                <h4>Department Name</h4>
+                <p>Department Descirption</p>
+                <p>Company Name</p>
+            </div>
+
+            <div class="icons-list flex justify-center">
+                <img src="../../assets/eye_icon.png" alt="">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="department flex flex-col">
+            <div class="department-info flex flex-col">
+                <h4>Department Name</h4>
+                <p>Department Descirption</p>
+                <p>Company Name</p>
+            </div>
+
+            <div class="icons-list flex justify-center">
+                <img src="../../assets/eye_icon.png" alt="">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="department flex flex-col">
+            <div class="department-info flex flex-col">
+                <h4>Department Name</h4>
+                <p>Department Descirption</p>
+                <p>Company Name</p>
+            </div>
+
+            <div class="icons-list flex justify-center">
+                <img src="../../assets/eye_icon.png" alt="">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="department flex flex-col">
+            <div class="department-info flex flex-col">
+                <h4>Department Name</h4>
+                <p>Department Descirption</p>
+                <p>Company Name</p>
+            </div>
+
+            <div class="icons-list flex justify-center">
+                <img src="../../assets/eye_icon.png" alt="">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="department flex flex-col">
+            <div class="department-info flex flex-col">
+                <h4>Department Name</h4>
+                <p>Department Descirption</p>
+                <p>Company Name</p>
+            </div>
+
+            <div class="icons-list flex justify-center">
+                <img src="../../assets/eye_icon.png" alt="">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="department flex flex-col">
+            <div class="department-info flex flex-col">
+                <h4>Department Name</h4>
+                <p>Department Descirption</p>
+                <p>Company Name</p>
+            </div>
+
+            <div class="icons-list flex justify-center">
+                <img src="../../assets/eye_icon.png" alt="">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+    </ul>
+
+    <div class="registered-users flex justify-center align-center">
+        <h3>Usuários Cadastrados</h3>
+    </div>
+
+    <ul class="users-list flex justify-between wrap">
+        <li class="user flex flex-col">
+            <div class="user-info flex flex-col">
+                <h4>Username</h4>
+                <p>Pleno</p>
+                <p>Company Name</p>
+            </div>
+            <div class="user-icons-list flex justify-center">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="user flex flex-col">
+            <div class="user-info flex flex-col">
+                <h4>Username</h4>
+                <p>Pleno</p>
+                <p>Company Name</p>
+            </div>
+            <div class="user-icons-list flex justify-center">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="user flex flex-col">
+            <div class="user-info flex flex-col">
+                <h4>Username</h4>
+                <p>Pleno</p>
+                <p>Company Name</p>
+            </div>
+            <div class="user-icons-list flex justify-center">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="user flex flex-col">
+            <div class="user-info flex flex-col">
+                <h4>Username</h4>
+                <p>Pleno</p>
+                <p>Company Name</p>
+            </div>
+            <div class="user-icons-list flex justify-center">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="user flex flex-col">
+            <div class="user-info flex flex-col">
+                <h4>Username</h4>
+                <p>Pleno</p>
+                <p>Company Name</p>
+            </div>
+            <div class="user-icons-list flex justify-center">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+        <li class="user flex flex-col">
+            <div class="user-info flex flex-col">
+                <h4>Username</h4>
+                <p>Pleno</p>
+                <p>Company Name</p>
+            </div>
+            <div class="user-icons-list flex justify-center">
+                <img src="../../assets/pencil_icon.png" alt="">
+                <img src="../../assets/trash_icon.png" alt="">
+            </div>
+        </li>
+        
+    </ul>
+
+    <div class="modal-bg-view modal-bg flex justify-center align-center hidden">
+        <div class="modal-view flex flex-col">
+            <div class="close-modal flex justify-end">
+                <img src="../../assets/close_icon.png" alt="">
+            </div>
+            <h3>Nome do deportamento</h3>
+            <div class="flex justify-between">
+                <div class="view-department-info flex flex-col">
+                    <h4>Descrição do departamento</h4>
+                    <p>Empresa pertencente</p>
+                </div>
+                <div class="view-func flex flex-col align-end">
+                    <select name="select-user" id="select-user">
+                        <option value="" disabled selected hidden>Selecionar usuário</option>
+                    </select>
+                    <button class="flex justify-center align-center">Contratar</button>
+                </div>
+            </div>
+
+            <ul class="view-users-list flex">
+                <li class="view-user flex flex-col">
+                    <div class="view-user-info flex flex-col">
+                        <h3>Username</h3>
+                        <p>Pleno</p>
+                        <p>Company name</p>
+                    </div>
+                    <div class="remove-user flex justify-center">
+                        <button>Desligar</button>
+                    </div>
+                </li>
+                <li class="view-user flex flex-col">
+                    <div class="view-user-info flex flex-col">
+                        <h3>Username</h3>
+                        <p>Pleno</p>
+                        <p>Company name</p>
+                    </div>
+                    <div class="remove-user flex justify-center">
+                        <button>Desligar</button>
+                    </div>
+                </li>
+                <li class="view-user flex flex-col">
+                    <div class="view-user-info flex flex-col">
+                        <h3>Username</h3>
+                        <p>Pleno</p>
+                        <p>Company name</p>
+                    </div>
+                    <div class="remove-user flex justify-center">
+                        <button>Desligar</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-bg-delete modal-bg flex justify-center align-center hidden">
+        <div class="modal-remove flex flex-col">
+            <div class="close-modal flex justify-end">
+                <img src="../../assets/close_icon.png" alt="">
+            </div>
+            <div class="alert flex justify-center">
+                <h2>Realmente deseja remover o usuário NOME?</h2>
+            </div>
+            <button>Deletar</button>
+        </div>
+    </div>
+
+    <div class="modal-bg-edit-user modal-bg flex justify-center align-center hidden">
+        <div class="modal-edit-user flex flex-col">
+            <div class="close-modal flex justify-end">
+                <img src="../../assets/close_icon.png" alt="">
+            </div>
+            <h3>Editar Usuário</h3>
+            <select name="work-modality" id="work-modality">
+                <option value="" disabled selected hidden>Selecionar modalidade de trabalho</option>
+            </select>
+            <select name="profissional-level" id="profissional-level">
+                <option value="" disabled selected hidden>Selecionar nível profissional</option>
+            </select>
+            <button>Editar</button>
+        </div>
+    </div>
+
+    <div class="modal-bg-create modal-bg flex justify-center align-center hidden">
+        <div class="modal-create flex flex-col">
+            <div class="close-modal flex justify-end">
+                <img src="../../assets/close_icon.png" alt="">
+            </div>
+            <h3>Criar Departamento</h3>
+            <input type="text" placeholder="Nome do departamento">
+            <input type="text" placeholder="Descrição">
+            <select name="select-department" id="select-department">
+                <option value="" disabled selected hidden>Selecionar empresa</option>
+            </select>
+            <button>Criar o departamento</button>
+        </div>
+    </div>
+
+    <div class="modal-bg-edit-department modal-bg flex justify-center align-center hidden">
+        <div class="modal-edit-department flex flex-col">
+            <div class="close-modal flex justify-end">
+                <img src="../../assets/close_icon.png" alt="">
+            </div>
+            <h3>Editar Departamento</h3>
+            <div class="edit-user flex flex-col">
+                <textarea name="" id="" cols="30" rows="5" placeholder="Valores anteriores da descrição"></textarea>
+                <button>Salvar alterações</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg-delete-department modal-bg flex justify-center align-center">
+        <div class="modal-delete-department flex flex-col">
+            <div class="close-modal flex justify-end">
+                <img src="../../assets/close_icon.png" alt="">
+            </div>
+            <div class="alert flex justify-center">
+                <h2>Realmente deseja deletar o Departamento NOME e demitir seus funcionários?</h2>
+            </div>
+            <button>Confirmar</button>
+        </div>
+    </div>
+    <script src="../../scripts/baseUrl.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

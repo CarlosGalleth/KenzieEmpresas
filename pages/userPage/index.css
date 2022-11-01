@@ -1,0 +1,124 @@
+
+.container {
+    margin: 112px auto 0 auto;
+    width: 80%;
+    gap: var(--gap-3);
+}
+.user {
+    width: 100%;
+    border: 1px solid var(--color-grey-400);
+    padding: 30px;
+}
+.user > img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.user-container {
+    gap: var(--gap-5);
+}
+.user-container>h3 {
+    font-size: 28px;
+}
+.user-info {
+    width: 100%;
+    gap: 40%;
+}
+.user-info > p{
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 20px;
+}
+.not-hired {
+    cursor: pointer;
+    background-color: var(--color-grey-700);
+    border: 2px solid var(--color-grey-400);
+    width: 100%;
+    height: 450px;
+}
+.not-hired>h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.company-info{
+    margin-bottom: 100px;
+}
+.company-name{
+    background-color: var(--brand-blue);
+    color: var(--fixed-white);
+    height: 78px;
+}
+.company-name > h3{
+    font-weight: 700;
+    font-size: 32px;
+}
+.company-funcs{
+    background-color: var(--color-grey-700);
+    padding: 35px 40px 50px 40px;
+}
+.func{
+    width: 31%;
+    border: 1px solid var(--brand-blue);
+    gap: var(--gap-5);
+    padding: 15px 18px;
+    margin-top: 15px;
+}
+.func > h4{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.modal-bg{
+    background-color:rgba(70, 35, 167, 0.13);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.modal{
+    background-color: var(--color-grey-700);
+    padding: 30px;
+    gap: var(--gap-5);
+}
+.close-modal{
+    background-color: transparent;
+    border: none;
+    width: max-content;
+}
+.close-modal > img{
+    width: 20px;
+    height: 20px;
+}
+.modal > h3{
+    font-weight: 700;
+    font-size: 40px;
+}
+.edit-inputs{
+    width: 422px;
+    gap: var(--gap-6);
+}
+.edit-inputs > input{
+    border: 1px solid var(--color-grey-400);
+    width: 100%;
+    height: 52px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.edit-inputs > input:focus{
+    outline: 1px solid var(--brand-blue);
+}
+.modal > button{
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--brand-blue);
+    color: var(--fixed-white);
+    border: none;
+}
