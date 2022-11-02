@@ -19,33 +19,33 @@
             </div>
 
             <div class="top-buttons flex align-center">
-                <button id="loggout">Loggout</button>
+                <button id="logout">Logout</button>
             </div>
             <img src="../../assets/menu.png" alt="" class="img-top">
         </div>
         <div class="top-buttons modal-top flex justify-center hidden">
-            <button id="loggout">Loggout</button>
+            <button id="logout">Logout</button>
         </div>
     </header>
 
     <main class="container flex flex-col">
         <div class="user flex justify-between align-center">
             <div class="user-container flex flex-col">
-                <h3>USERNAME</h3>
+                <h3 id="username">USERNAME</h3>
                 <div class="user-info flex">
-                    <p>Email: meuemail@gmail.com</p>
-                    <p>Pleno</p>
-                    <p>Home Office</p>
+                    <p id="user-email">Email: meuemail@gmail.com</p>
+                    <p id="user-prof-level">Pleno</p>
+                    <p id="user-kind-of-work">Home Office</p>
                 </div>
             </div>
-            <img src="../../assets/edit_pencil.png" alt="">
+            <img src="../../assets/edit_pencil.png" alt="" id="btn-edit">
         </div>
 
-        <div class="not-hired flex justify-center align-center hidden">
+        <div class="not-hired flex justify-center align-center">
             <h3>Você ainda não foi contratado</h3>
         </div>
 
-        <div class="company-info flex flex-col">
+        <div class="company-info flex flex-col hidden">
             <div class="company-name flex justify-center align-center">
                 <h3>Company Name - Department Name</h3>
             </div>
@@ -69,21 +69,21 @@
         </div>
     </main>
 
-    <div class="modal-bg flex justify-center align-center hidden">
+    <div class="modal-bg flex justify-center align-center hidden" id="modal-edit">
         <div class="modal flex flex-col">
             <div class="close-container flex justify-end">
-                <button class="close-modal flex justify-center align-center"><img src="../../assets/close_icon.png" alt=""></button>
+                <button id="close-edit" class="close-modal flex justify-center align-center"><img src="../../assets/close_icon.png" alt=""></button>
             </div>
             <h3>Editar Perfil</h3>
             <form class="edit-inputs flex flex-col">
-                <input type="text" placeholder="Seu nome">
-                <input type="text" placeholder="Seu e-mail">
-                <input type="password" placeholder="Sua senha">
+                <input type="text" placeholder="Seu nome" id="new-username">
+                <input type="email" placeholder="Seu e-mail" id="new-email">
+                <input type="password" placeholder="Sua senha" id="new-password">
             </form>
-            <button>Editar Perfil</button>
-        </div>
+            <button id="edit-profile">Editar Perfil</button>
+        </div> 
     </div>
-    <script src="../../scripts/baseUrl.js"></script>
-    <script src="./index.js"></script>
+    <script type="module" src="../../scripts/baseUrl.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

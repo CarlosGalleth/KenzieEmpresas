@@ -79,3 +79,8 @@ label {
 .align-end {
     align-items: flex-end;
 }
+
+.disabled-button{
+    background-color: rgb(109, 109, 255) !important;
+    cursor: default;
+}

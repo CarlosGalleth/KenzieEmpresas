@@ -5,7 +5,6 @@ function abrirMenu() {
     btnMenu.addEventListener('click', () => {
         let modal = document.getElementsByClassName("modal-top")[0]
         modal.classList.toggle("hidden")
-
     })
 }
 abrirMenu()
@@ -30,7 +29,8 @@ function retornarAoLogin() {
 }
 retornarAoLogin()
 
-async function teste() {
+
+async function listarEmpresas() {
     await fetch(`${baseURL}/companies`, {
         method: "GET",
         headers: {
@@ -40,10 +40,9 @@ async function teste() {
         .then(response => response.json())
         .then(response => renderizarEmpresa(response))
 }
-
-function renderizarEmpresa(empresa) {
+function renderizarEmpresa(empresas) {
     let sectorList = document.getElementsByClassName("sector-list")[0]
-    empresa.forEach(elem => {
+    empresas.forEach(elem => {
         let li = document.createElement("li")
         li.classList = "sector-item flex flex-col"
 
@@ -64,14 +63,46 @@ function renderizarEmpresa(empresa) {
         sectorList.append(li)
     })
 }
+listarEmpresas()
 
-/*
-<li class="sector-item flex flex-col">
-    <h3>Empresa Name</h3>
-    <div class="item-bottom flex flex-col">
-        <p>10 horas</p>
-        <h4>Setor</h4>
-    </div>
-</li>
-*/
-teste()
+
+async function listarSetores() {
+    await fetch(`${baseURL}/sectors`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    .then(response => response.json())
+    .then(response => renderizarSetores(response))
+}
+function renderizarSetores(setores) {
+    let sectorList = document.getElementById("sector")
+    setores.forEach(elem => {
+        let opt = document.createElement("option")
+        opt.innerText = elem.description
+        sectorList.append(opt)
+    })
+    sectorList.addEventListener("change", () => {
+        filtrarSetores(sectorList.value)
+    })
+}
+async function filtrarSetores(setorSelecionado) {
+    let sectorList = document.getElementsByClassName("sector-list")[0]
+    sectorList.innerHTML = ""
+
+    await fetch(`${baseURL}/companies`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+        .then(response => response.json())
+        .then(response => {
+            let arrFiltered = response.filter(elem => {
+                return elem.sectors.description == setorSelecionado
+            })
+            renderizarEmpresa(arrFiltered)
+        })
+}
+listarSetores()

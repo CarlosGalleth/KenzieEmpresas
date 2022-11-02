@@ -60,6 +60,10 @@ body {
     border: none;
     color: var(--fixed-white);
 }
+.alert{
+    color: var(--brand-red);
+    margin-bottom: 15px;
+}
 
 @media(max-width: 900px){
     .login-container{

@@ -35,22 +35,23 @@
         <div class="register flex flex-col">
             <h3>Cadastre-se</h3>
             <form class="register-info flex flex-col">
-                <input type="text" placeholder="Seu nome">
-                <input type="text" placeholder="Seu e-mail">
-                <input type="password" placeholder="Sua senha">
+                <input type="text" placeholder="Seu nome" id="username">
+                <input type="email" placeholder="Seu e-mail" id="email">
+                <input type="password" placeholder="Sua senha" id="password">
                 <select name="levels" id="select">
                     <option value="" disabled selected hidden>Nível profissional</option>
-                    <option value="junior">Júnior</option>
+                    <option value="estágio">Estágio</option>
+                    <option value="júnior">Júnior</option>
                     <option value="pleno">Pleno</option>
-                    <option value="senior">Sênior</option>
+                    <option value="sênior">Sênior</option>
                 </select>
                 <button id="register-btn">Cadastre-se</button>
                 <button id="return-btn">Retornar</button>
             </form>
         </div> 
     </main>
-    <script src="../../scripts/baseUrl.js"></script>
-    <script src="./index.js"></script>
+    <script type="module" src="../../scripts/baseUrl.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>

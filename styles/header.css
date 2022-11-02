@@ -59,11 +59,11 @@
     padding: 17px 20px;
     gap: var(--gap-5);
 }
-#loggout {
+#logout {
     background-color: var(--fixed-white);
     color: var(--brand-blue);
 }
-#loggout:hover{
+#logout:hover{
     background-color: var(--brand-blue);
     color: var(--fixed-white);
 }

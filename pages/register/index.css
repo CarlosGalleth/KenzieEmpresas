@@ -58,7 +58,7 @@ body {
     border: none;
 }
 #return-btn{
-    background-color: var(--fixed-white);
+    background-color: transparent;
     color: var(--brand-blue);
     border: 1px solid var(--brand-blue);
 }
