@@ -1,4 +1,4 @@
-import {baseURL} from "../../scripts/baseUrl.js"
+import {baseURL} from "/scripts/baseUrl.js"
 let userToken = localStorage.getItem("usuarioKenzieEmpresas")
 console.log(userToken)
 function deslogar() {

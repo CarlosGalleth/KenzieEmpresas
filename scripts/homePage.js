@@ -1,4 +1,4 @@
-import { baseURL } from "../scripts/baseUrl.js"
+import { baseURL } from "/scripts/baseUrl.js"
 
 function abrirMenu() {
     let btnMenu = document.getElementsByClassName("img-top")[0]

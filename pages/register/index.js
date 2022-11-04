@@ -1,4 +1,4 @@
-import { baseURL } from "../../scripts/baseUrl.js"
+import { baseURL } from "/scripts/baseUrl.js"
 
 function retornarAHome() {
     let btnHome = document.querySelectorAll(".btn-home")
