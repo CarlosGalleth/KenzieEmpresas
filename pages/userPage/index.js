@@ -5,10 +5,14 @@ function deslogar() {
     logoutBtn.forEach(elem => {
         elem.addEventListener('click', () => {
             localStorage.removeItem("usuarioKenzieEmpresas")
-            window.location.assign("../login/index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../login/index.html")
+            }, 1500)
         })
     })
-} 
+}
 deslogar()
 
 async function validacaoUser() {
@@ -19,12 +23,12 @@ async function validacaoUser() {
             Authorization: `Bearer ${userToken}`,
         },
     })
-    .then(response => {
-        if (response.status !== 200) {
-            window.location.assign("../../index.html")
-        }
-        return response.json()
-    })
+        .then(response => {
+            if (response.status !== 200) {
+                window.location.assign("../../index.html")
+            }
+            return response.json()
+        })
 
     let getAdmin = localStorage.getItem("adminKenzieEmpresas")
     if (getAdmin) {
@@ -37,12 +41,12 @@ async function capturarUsuario() {
     await fetch(`${baseURL}/users/profile`, {
         method: "GET",
         headers: {
-            "Content-Type": "application/json", 
-            Authorization: `Bearer ${userToken}`, 
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${userToken}`,
         },
     })
-    .then(response => response.json())
-    .then(response => renderizarUsuario(response))
+        .then(response => response.json())
+        .then(response => renderizarUsuario(response))
 }
 async function renderizarUsuario(user) {
     let username = document.getElementById("username")
@@ -63,18 +67,18 @@ async function renderizarUsuario(user) {
         boxNotHired.classList.add("hidden")
         companyInfo.classList.remove("hidden")
 
-        await fetch(`${baseURL}/users/departments/coworkers`,{
+        await fetch(`${baseURL}/users/departments/coworkers`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${userToken}`,
             },
         })
-        .then(response => response.json())
-        .then(response => {
-            renderizarCooperadores(response[0].users)
-            renderizarInfoEmpresa(response[0].users)
-        })
+            .then(response => response.json())
+            .then(response => {
+                renderizarCooperadores(response[0].users)
+                renderizarInfoEmpresa(response[0].users)
+            })
     }
 }
 function renderizarCooperadores(users) {
@@ -96,7 +100,7 @@ function renderizarCooperadores(users) {
 
 async function renderizarInfoEmpresa(users) {
     let departmentUuid = users[0].department_uuid
-    
+
     await fetch(`${baseURL}/users/departments`, {
         method: "GET",
         headers: {
@@ -104,43 +108,61 @@ async function renderizarInfoEmpresa(users) {
             Authorization: `Bearer ${userToken}`,
         },
     })
-    .then(response => response.json())
-    .then(response => {
-        let departmentFound = response.departments.find(elem => {
-            return elem.uuid == departmentUuid
+        .then(response => response.json())
+        .then(response => {
+            let departmentFound = response.departments.find(elem => {
+                return elem.uuid == departmentUuid
+            })
+            let companyTitle = document.getElementById("company-info-title")
+            companyTitle.innerText = `${response.name} - ${departmentFound.name}`
         })
-        let companyTitle = document.getElementById("company-info-title")
-        companyTitle.innerText = `${response.name} - ${departmentFound.name}`
-    })
 }
 capturarUsuario()
 
 function editarMeuPerfil() {
-    let modalEdit = document.getElementById("modal-edit")
+    let btnEditProfile = document.getElementById("edit-profile")
+    let newName = document.getElementById("new-username")
+    let newEmail = document.getElementById("new-email")
+    let newPassword = document.getElementById("new-password")
+    let arrInput = [newName, newEmail, newPassword]
 
+    let modalEdit = document.getElementById("modal-edit")
     let btnEdit = document.getElementById("btn-edit")
     btnEdit.addEventListener('click', () => {
         modalEdit.classList.remove("hidden")
     })
-
     let btnCloseEdit = document.getElementById("close-edit")
     btnCloseEdit.addEventListener('click', () => {
         modalEdit.classList.add("hidden")
     })
 
-    let btnEditProfile = document.getElementById("edit-profile")
+    if (newName.value == "" || newEmail.value == "" || newPassword.value == "") {
+        btnEditProfile.disabled = true
+        btnEditProfile.classList.add("disabled-button")
+    }
+
+    arrInput.forEach(input => {
+        input.addEventListener('input', () => {
+            if (newName.value == "" || newEmail.value == "" || newPassword.value == "") {
+                btnEditProfile.disabled = true
+                btnEditProfile.classList.add("disabled-button")
+            }
+            else{
+                btnEditProfile.disabled = false
+                btnEditProfile.classList.remove("disabled-button")
+            }
+        })
+    })
+
     btnEditProfile.addEventListener('click', async (e) => {
         e.preventDefault()
-        let newName = document.getElementById("new-username")
-        let newEmail = document.getElementById("new-email")
-        let newPassword = document.getElementById("new-password")
 
         let newInfo = {
             "username": newName.value,
             "email": newEmail.value,
             "password": newPassword.value,
         }
-        
+
         await fetch(`${baseURL}/users`, {
             method: "PATCH",
             headers: {
@@ -149,10 +171,14 @@ function editarMeuPerfil() {
             },
             body: JSON.stringify(newInfo),
         })
-        .then(response => response.json())
-        .then(response => response)
+            .then(response => response.json())
+            .then(response => response)
         modalEdit.classList.add("hidden")
-        window.location.assign("./index.html")
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("./index.html")
+        }, 1500)
     })
 
 }

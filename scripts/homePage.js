@@ -13,7 +13,11 @@ function retornarAoCadastro() {
     let btnRegister = Array.from(document.querySelectorAll(".btn-register"))
     btnRegister.forEach(elem => {
         elem.addEventListener('click', () => {
-            window.location.assign("./pages/register/index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("./pages/register/index.html")
+            }, 1500)
         })
     })
 }
@@ -23,7 +27,11 @@ function retornarAoLogin() {
     let btnLogin = Array.from(document.querySelectorAll(".btn-login"))
     btnLogin.forEach(elem => {
         elem.addEventListener('click', () => {
-            window.location.assign("./pages/login/index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("./pages/login/index.html")
+            }, 1500)
         })
     })
 }

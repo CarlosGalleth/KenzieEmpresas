@@ -28,7 +28,11 @@ function deslogar() {
     logoutBtn.forEach(elem => {
         elem.addEventListener('click', () => {
             localStorage.removeItem("adminKenzieEmpresas")
-            window.location.assign("../login/index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../login/index.html")
+            }, 1500)
         })
     })
 }

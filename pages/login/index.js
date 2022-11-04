@@ -10,7 +10,11 @@ function retornarAoCadastro() {
     btnRegister.push(btnRegBot)
     btnRegister.forEach(elem => {
         elem.addEventListener('click', () => {
-            window.location.assign("../register/index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../register/index.html")
+            }, 1500)
         })
     })
 }
@@ -19,7 +23,11 @@ function retornarAHome() {
     let btnHome = document.querySelectorAll(".btn-home")
     btnHome.forEach(elem => {
         elem.addEventListener('click', () => {
-            window.location.assign("../../index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../../index.html")
+            }, 1500)
         })
     })
 }

@@ -64,7 +64,12 @@ async function criarDepartamento() {
         })
             .then(response => response.json())
             .then(response => response)
-        window.location.assign("./index.html")
+
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("./index.html")
+        }, 1500)
     })
 }
 criarDepartamento()
@@ -91,9 +96,13 @@ export function editarDepartamento(departamento) {
             },
             body: JSON.stringify(newDescription),
         })
-        .then(response => response.json())
-        .then(response => response)
-        window.location.assign("./index.html")
+            .then(response => response.json())
+            .then(response => response)
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("./index.html")
+        }, 1500)
     })
 }
 
@@ -113,7 +122,11 @@ export function deletarDepartamento(departamento) {
                 Authorization: `Bearer ${adminToken}`,
             },
         })
-        window.location.assign("./index.html")
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("./index.html")
+        }, 1500)
     })
 }
 
@@ -159,7 +172,7 @@ async function renderizarFuncionários(departamento) {
             let founded = response.filter(user => {
                 return user.department_uuid == departamento.uuid
             })
-            
+
             founded.forEach(elem => {
                 let li = document.createElement("li")
                 li.classList = "view-user flex flex-col"
@@ -210,9 +223,13 @@ function demitirFuncionario(funcionario) {
                 Authorization: `Bearer ${adminToken}`,
             },
         })
-        .then(response => response.json())
-        .then(response => response)
-        window.location.assign("./index.html")
+            .then(response => response.json())
+            .then(response => response)
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("./index.html")
+        }, 1500)
     })
 }
 
@@ -264,7 +281,11 @@ function contratarFuncionario(users, departamento) {
         })
             .then(response => response.json())
             .then(response => response)
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
             window.location.assign("./index.html")
+        }, 1500)
     })
 }
 
@@ -296,9 +317,13 @@ export function editarUsuario(usuario, token) {
             .then(response => response.json())
             .then(response => console.log(response))
 
-        window.location.assign("./index.html")
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("./index.html")
+        }, 1500)
     })
-}
+} 
 
 export function deletarUsuario(usuario, token) {
     let flexName = document.getElementById("flex-name")
@@ -318,7 +343,11 @@ export function deletarUsuario(usuario, token) {
                 .then(response => response)
         }
         catch {
-            window.location.assign("./index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("./index.html")
+            }, 1500)
         }
     })
 }

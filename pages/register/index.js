@@ -4,16 +4,25 @@ function retornarAHome() {
     let btnHome = document.querySelectorAll(".btn-home")
     btnHome.forEach(elem => {
         elem.addEventListener('click', () => {
-            window.location.assign("../../index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../../index.html")
+            }, 1500)
         })
     })
 }
 retornarAHome()
+
 function retornarAoLogin() {
     let btnLogin = document.querySelectorAll(".btn-login")
     btnLogin.forEach(elem => {
         elem.addEventListener('click', () => {
-            window.location.assign("../login/index.html")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../login/index.html")
+            }, 1500)
         })
     })
 }
