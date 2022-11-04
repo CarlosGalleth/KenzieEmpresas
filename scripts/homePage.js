@@ -6,12 +6,14 @@ function abrirMenu() {
     let btnMenu = document.getElementsByClassName("img-top")[0]
     btnMenu.addEventListener('click', () => {
         btnMenu.classList.add("hidden")
+        btnMenu.classList.remove("img-top")
         btnClose.classList.remove("hidden")
         modal.classList.remove("hidden")
     })
 
     btnClose.addEventListener('click', () => {
         btnMenu.classList.remove("hidden")
+        btnMenu.classList.add("img-top")
         btnClose.classList.add("hidden")
         modal.classList.add("hidden")
     })

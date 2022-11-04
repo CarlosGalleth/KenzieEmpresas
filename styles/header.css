@@ -34,6 +34,7 @@
     border-radius: 2px;
 }
 .img-top {
+    display: none;
     width: 25px;
     height: 25px;
 }

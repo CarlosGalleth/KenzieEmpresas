@@ -81,7 +81,7 @@ select:focus{
         display: none;
     }
     .img-top{
-        display: flex;
+        display: flex !important;
         width: 30px;
     }
     .modal-top{
