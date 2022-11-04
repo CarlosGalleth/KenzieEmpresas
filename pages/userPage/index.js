@@ -118,18 +118,10 @@ capturarUsuario()
 
 function editarMeuPerfil() {
     let modalEdit = document.getElementById("modal-edit")
-    let newName = document.getElementById("new-username")
-    let newEmail = document.getElementById("new-email")
-    let newPassword = document.getElementById("new-password")
-
-    let actualName = document.getElementById("username")
-    let actualEmail = document.getElementById("user-email")
 
     let btnEdit = document.getElementById("btn-edit")
     btnEdit.addEventListener('click', () => {
         modalEdit.classList.remove("hidden")
-        newName.value = actualName.innerText
-        newEmail.value = actualEmail.innerText
     })
 
     let btnCloseEdit = document.getElementById("close-edit")
@@ -140,6 +132,9 @@ function editarMeuPerfil() {
     let btnEditProfile = document.getElementById("edit-profile")
     btnEditProfile.addEventListener('click', async (e) => {
         e.preventDefault()
+        let newName = document.getElementById("new-username")
+        let newEmail = document.getElementById("new-email")
+        let newPassword = document.getElementById("new-password")
 
         let newInfo = {
             "username": newName.value,
