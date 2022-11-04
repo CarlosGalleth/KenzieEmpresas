@@ -1,4 +1,4 @@
-import { baseURL } from "/scripts/baseURL.js"
+import { baseURL } from "/scripts/baseUrl.js"
 import { adminToken } from "./index.js"
 
 async function criarDepartamento() {
