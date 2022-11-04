@@ -1,4 +1,4 @@
-import { baseURL } from "/scripts/baseUrl.js"
+const baseURL = "http://localhost:6278"
 
 function retornarAHome() {
     let btnHome = document.querySelectorAll(".btn-home")

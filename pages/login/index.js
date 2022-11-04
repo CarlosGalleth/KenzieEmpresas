@@ -1,5 +1,4 @@
-import {baseURL} from "/scripts/baseUrl.js"
-const adminToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMWM1N2I2ZmItNTA3OC00ZmRkLWJmNmItZGI1YjBjYjBjNWFmIiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTY2NzQwMDYwMiwiZXhwIjoxNjY4MjY0NjAyLCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ.MVL0h9rHZwHRHeVnH6ma2hiGZlSJ9_C1V6kfp-QqUn4"
+const baseURL = "http://localhost:6278"
 
 function retornarAoCadastro() {
     let btnRegister = []

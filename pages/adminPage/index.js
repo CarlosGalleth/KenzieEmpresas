@@ -1,4 +1,4 @@
-import { baseURL } from "/scripts/baseUrl.js";
+const baseURL = "http://localhost:6278"
 import { acessarDepartamento } from "./funcionalidades.js"
 import { editarDepartamento } from "./funcionalidades.js"
 import { deletarDepartamento } from "./funcionalidades.js"

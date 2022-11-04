@@ -1,4 +1,4 @@
-import { baseURL } from "/scripts/baseUrl.js"
+const baseURL = "http://localhost:6278"
 
 function abrirMenu() {
     let btnMenu = document.getElementsByClassName("img-top")[0]
