@@ -1,4 +1,4 @@
-import { baseURL } from "../../scripts/baseUrl.js";
+import { baseURL } from "/scripts/baseUrl.js";
 import { acessarDepartamento } from "./funcionalidades.js"
 import { editarDepartamento } from "./funcionalidades.js"
 import { deletarDepartamento } from "./funcionalidades.js"

@@ -146,6 +146,7 @@ export async function acessarDepartamento(departamento) {
 
 async function renderizarFuncionários(departamento) {
     let funcsList = document.getElementsByClassName("view-users-list")[0]
+    funcsList.innerHTML = ""
     await fetch(`${baseURL}/users`, {
         method: "GET",
         headers: {
