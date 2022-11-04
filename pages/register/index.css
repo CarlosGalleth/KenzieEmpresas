@@ -102,3 +102,24 @@ body {
         font-size: 29px;
     }
 }
+@media(max-width: 830px){
+    .top-buttons{
+        display: none;
+    }
+    .img-top{
+        display: flex;
+        width: 30px;
+    }
+    .modal-top{
+        display: flex;
+    }
+}
+@media(max-width: 340px){
+    .modal-top{
+        gap: var(--gap-6);
+    }
+    .btn-register, .btn-login{
+        font-size: 16px !important;
+        padding: 13px 26px !important;
+    }
+}

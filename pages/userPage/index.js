@@ -1,5 +1,6 @@
 const baseURL = "http://localhost:6278"
 let userToken = localStorage.getItem("usuarioKenzieEmpresas")
+
 function deslogar() {
     let logoutBtn = document.querySelectorAll("#logout")
     logoutBtn.forEach(elem => {

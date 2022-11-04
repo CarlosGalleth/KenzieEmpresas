@@ -25,7 +25,7 @@
 .top-buttons {
     gap: var(--gap-6);
 }
-.top-buttons>button {
+.top-buttons > button {
     padding: 16px 40px;
     border: 1px solid var(--brand-blue);
     font-weight: 600;
@@ -34,10 +34,14 @@
     border-radius: 2px;
 }
 .img-top {
-    display: none;
     width: 25px;
     height: 25px;
 }
+.img-close{
+    width: 25px;
+    height: 25px;
+}
+
 .btn-login {
     background-color: var(--fixed-white);
     color: var(--brand-blue);

@@ -1,10 +1,19 @@
 const baseURL = "http://localhost:6278"
 
 function abrirMenu() {
+    let modal = document.getElementsByClassName("modal-top")[0]
+    let btnClose = document.getElementsByClassName("img-close")[0]
     let btnMenu = document.getElementsByClassName("img-top")[0]
     btnMenu.addEventListener('click', () => {
-        let modal = document.getElementsByClassName("modal-top")[0]
-        modal.classList.toggle("hidden")
+        btnMenu.classList.add("hidden")
+        btnClose.classList.remove("hidden")
+        modal.classList.remove("hidden")
+    })
+
+    btnClose.addEventListener('click', () => {
+        btnMenu.classList.remove("hidden")
+        btnClose.classList.add("hidden")
+        modal.classList.add("hidden")
     })
 }
 abrirMenu()
