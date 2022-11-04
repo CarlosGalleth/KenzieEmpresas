@@ -29,7 +29,6 @@ function retornarAoLogin() {
 }
 retornarAoLogin()
 
-
 async function listarEmpresas() {
     await fetch(`${baseURL}/companies`, {
         method: "GET",
@@ -106,3 +105,16 @@ async function filtrarSetores(setorSelecionado) {
         })
 }
 listarSetores()
+
+function resetarLocalStorage() {
+    let adm = localStorage.getItem("adminKenzieEmpresas")
+    let user = localStorage.getItem("usuarioKenzieEmpresas")
+
+    if (adm) {
+        localStorage.removeItem("adminKenzieEmpresas")
+    }
+    if (user) {
+        localStorage.removeItem("usuarioKenzieEmpresas")
+    }
+}
+resetarLocalStorage()

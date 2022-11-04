@@ -28,7 +28,7 @@ function fecharModalEditUser() {
 fecharModalEditUser()
 
 function fecharModalCriar() {
-    let closeCreate = document.getElementById("close-criar")
+    let closeCreate = document.getElementById("close-create")
     closeCreate.addEventListener('click', () => {
         let modalCreate = document.getElementsByClassName("modal-bg-create")[0]
         modalCreate.classList.add("hidden")

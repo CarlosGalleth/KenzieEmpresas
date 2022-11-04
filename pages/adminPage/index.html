@@ -38,21 +38,6 @@
     </div>
 
     <ul class="departments-list flex justify-between wrap">
-        <!--
-        <li class="department flex flex-col">
-            <div class="department-info flex flex-col">
-                <h4>Department Name</h4>
-                <p>Department Descirption</p>
-                <p>Company Name</p>
-            </div>
-
-            <div class="icons-list flex justify-center">
-                <img src="../../assets/eye_icon.png" alt="">
-                <img src="../../assets/pencil_icon.png" alt="">
-                <img src="../../assets/trash_icon.png" alt="">
-            </div>
-        </li>
-        -->
     </ul>
 
     <div class="registered-users flex justify-center align-center">
@@ -60,19 +45,6 @@
     </div>
 
     <ul class="users-list flex justify-between wrap">
-        <!--
-        <li class="user flex flex-col">
-            <div class="user-info flex flex-col">
-                <h4>Username</h4>
-                <p>Pleno</p>
-                <p>Company Name</p>
-            </div>
-            <div class="user-icons-list flex justify-center">
-                <img src="../../assets/pencil_icon.png" alt="">
-                <img src="../../assets/trash_icon.png" alt="">
-            </div>
-        </li>
-        -->
     </ul>
 
     <div class="modal-bg-view modal-bg flex justify-center align-center hidden">
@@ -90,41 +62,11 @@
                     <select name="select-user" id="select-user">
                         <option value="" disabled selected hidden>Selecionar usuário</option>
                     </select>
-                    <button class="flex justify-center align-center">Contratar</button>
+                    <button class="flex justify-center align-center" id="hire">Contratar</button>
                 </div>
             </div>
 
             <ul class="view-users-list flex">
-                <li class="view-user flex flex-col">
-                    <div class="view-user-info flex flex-col">
-                        <h3>Username</h3>
-                        <p>Pleno</p>
-                        <p>Company name</p>
-                    </div>
-                    <div class="remove-user flex justify-center">
-                        <button>Desligar</button>
-                    </div>
-                </li>
-                <li class="view-user flex flex-col">
-                    <div class="view-user-info flex flex-col">
-                        <h3>Username</h3>
-                        <p>Pleno</p>
-                        <p>Company name</p>
-                    </div>
-                    <div class="remove-user flex justify-center">
-                        <button>Desligar</button>
-                    </div>
-                </li>
-                <li class="view-user flex flex-col">
-                    <div class="view-user-info flex flex-col">
-                        <h3>Username</h3>
-                        <p>Pleno</p>
-                        <p>Company name</p>
-                    </div>
-                    <div class="remove-user flex justify-center">
-                        <button>Desligar</button>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>
@@ -170,12 +112,12 @@
                 <img src="../../assets/close_icon.png" alt="" id="close-create">
             </div>
             <h3>Criar Departamento</h3>
-            <input type="text" placeholder="Nome do departamento">
-            <input type="text" placeholder="Descrição">
-            <select name="select-department" id="select-department">
+            <input type="text" placeholder="Nome do departamento" id="dep-name">
+            <input type="text" placeholder="Descrição" id="dep-description">
+            <select name="select-company" id="select-company">
                 <option value="" disabled selected hidden>Selecionar empresa</option>
             </select>
-            <button>Criar o departamento</button>
+            <button id="finish-create">Criar o departamento</button>
         </div>
     </div>
 
@@ -186,8 +128,8 @@
             </div>
             <h3>Editar Departamento</h3>
             <div class="edit-user flex flex-col">
-                <textarea name="" id="" cols="30" rows="5" placeholder="Valores anteriores da descrição"></textarea>
-                <button>Salvar alterações</button>
+                <textarea name="" cols="30" rows="5" placeholder="Valores anteriores da descrição" id="edit-desc"></textarea>
+                <button id="save-edit">Salvar alterações</button>
             </div>
         </div>
     </div>
@@ -198,9 +140,9 @@
                 <img src="../../assets/close_icon.png" alt="" id="close-delete-department">
             </div>
             <div class="alert flex justify-center">
-                <h2>Realmente deseja deletar o Departamento NOME e demitir seus funcionários?</h2>
+                <h2>Realmente deseja deletar o Departamento <span id="delete-dep-name"></span> e demitir seus funcionários?</h2>
             </div>
-            <button>Confirmar</button>
+            <button id="confirm-delete">Confirmar</button>
         </div>
     </div>
 
