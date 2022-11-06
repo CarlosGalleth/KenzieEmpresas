@@ -9,7 +9,7 @@ function deslogar() {
             let bar = document.getElementById("bar")
             bar.classList.add("progress-bar")
             setTimeout(() => {
-                window.location.assign("../login/index.html")
+                window.location.assign("../../index.html")
             }, 1500)
         })
     })
