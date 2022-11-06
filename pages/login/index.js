@@ -53,6 +53,7 @@ function retornarAHome() {
 retornarAHome() 
 
 function logarUsuario() {
+    let toastInvalid = document.getElementsByClassName("toastfy-invalid")[0]
     let alert = document.getElementsByClassName("alert")[0]
     let loginBtn = document.getElementById("login-btn")
     let emailInput = document.getElementsByClassName("login-email")[0]
@@ -67,6 +68,7 @@ function logarUsuario() {
     arrInputs.forEach(elem => {
         elem.addEventListener('input', () => {
             alert.classList.add("hidden")
+            toastInvalid.classList.add("hidden")
             if (emailInput.value == "" || passwordInput.value == "") {
                 loginBtn.disabled = true
                 loginBtn.classList.add("disabled-button")
@@ -94,8 +96,8 @@ function logarUsuario() {
         })
         .then(response => {
             if (response.status !== 200) {
-                let alert = document.getElementsByClassName("alert")[0]
                 alert.classList.remove("hidden")
+                toastInvalid.classList.remove("hidden")
             }
             else{
                 return response.json()
@@ -116,7 +118,6 @@ async function verificarTipo(token) {
     })
     .then(response => {
         if (response.status !== 200) {
-            let alert = document.getElementsByClassName("alert")[0]
             alert.classList.remove("hidden")
         }
         else{

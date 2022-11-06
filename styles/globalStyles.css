@@ -53,7 +53,7 @@ label {
     width: max-content;
 }
 
-.toastfy{
+.toastfy, .toastfy-invalid{
     position: absolute;
     right: 15px;
     bottom: 15px;
@@ -61,14 +61,19 @@ label {
     width: 240px;
     height: 70px;
     border-radius: var(--radius-4);
+    z-index: 3;
 }
-.toastfy > h4{
+.toastfy > h4, .toastfy-invalid > h4{
     color: var(--fixed-white);
     font-weight: 700;
     font-size: 16px;
     line-height: 17px;
     text-align: center;
     width: 180px;
+}
+
+.toastfy-invalid{
+    background-color: var(--brand-red) !important;
 }
 
 .progress-container{
