@@ -56,24 +56,24 @@ function registrarUsuario() {
     let registerBtn = document.getElementById("register-btn")
     let arrInput = [username, email, password]
 
-    if(username.value == "" || email.value == "" || password == ""){
+    if (username.value == "" || email.value == "" || password == "") {
         registerBtn.disabled = true
         registerBtn.classList.add("disabled-button")
     }
 
     arrInput.forEach(elem => {
         elem.addEventListener('input', () => {
-            if(username.value == "" || email.value == "" || password == ""){
+            if (username.value == "" || email.value == "" || password == "") {
                 registerBtn.disabled = true
                 registerBtn.classList.add("disabled-button")
             }
-            else{
+            else {
                 registerBtn.disabled = false
                 registerBtn.classList.remove("disabled-button")
             }
         })
     })
-    
+
     professionalLevel.addEventListener('change', () => {
         selectedLevel = professionalLevel.value
     })
@@ -86,18 +86,24 @@ function registrarUsuario() {
             "email": email.value,
             "professional_level": selectedLevel,
         }
-    
-        await fetch(`${baseURL}/auth/register`,{
+
+        await fetch(`${baseURL}/auth/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(user), 
+            body: JSON.stringify(user),
         })
-        .then(response => response.json())
-        .then(response => response)
+            .then(response => response.json())
+            .then(response => response)
 
-        window.location.assign("../login/index.html")
+        let toastfy = document.getElementsByClassName("toastfy")[0]
+        toastfy.classList.remove("hidden")
+        let bar = document.getElementById("bar")
+        bar.classList.add("progress-bar")
+        setTimeout(() => {
+            window.location.assign("../login/index.html")
+        }, 1500)
     })
 }
 registrarUsuario()

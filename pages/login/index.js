@@ -126,11 +126,23 @@ async function verificarTipo(token) {
     .then(response => {
         if (response.is_admin) {
             localStorage.setItem("adminKenzieEmpresas", token)
-            window.location.assign("../adminPage/index.html")
+            let toastfy = document.getElementsByClassName("toastfy")[0]
+            toastfy.classList.remove("hidden")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../adminPage/index.html")
+            }, 1500)
         }
         else{
             localStorage.setItem("usuarioKenzieEmpresas", token)
-            window.location.assign("../userPage/index.html")
+            let toastfy = document.getElementsByClassName("toastfy")[0]
+            toastfy.classList.remove("hidden")
+            let bar = document.getElementById("bar")
+            bar.classList.add("progress-bar")
+            setTimeout(() => {
+                window.location.assign("../userPage/index.html")
+            }, 1500)
         }
     })
 }
